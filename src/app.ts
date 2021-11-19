@@ -18,8 +18,19 @@ app.get("/json",(req,res)=>{
 })
 
 app.get("/object",(req,res)=>{
-    console.log(JSON.stringify(matematik_sorusu))
-    res.send("hello<br>" + matematik_sorusu.toHTML())
+    // console.log(matematik_sorusu.toJSON())
+    res.send(JSON.stringify(matematik_sorusu.toJSON()))
 })
 
-app.listen(SERVER_PORT,()=>{console.log("Listening on",SERVER_PORT,"\n\n\n")})
+app.get("/post",(req,res)=>{
+    console.log(req.body)
+    res.send("Hello <% data.name %> <br>"+req.body)
+})
+
+app.get("/post",(req,res)=>{
+    console.log(req.body)
+    res.send("Hello <% data.name %> <br>"+req.body)
+})
+
+
+app.listen(SERVER_PORT,()=>{console.log("Listening on",SERVER_PORT,"\n")})

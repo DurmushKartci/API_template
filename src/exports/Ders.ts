@@ -15,7 +15,17 @@ export class Ders{
     }
 
     /// DAVRANIŞLARI
+    toJSON(){
+        let Ders_json : any= {}
+        Ders_json["DersAdi"] = this.DersAdi
 
+        let Konular_json : any = {}
+        for(let i = 0;i<this.Konular.length;i++){
+            Konular_json["Konu"+(i+1)] = this.Konular[i].toJSON()
+        }
+        Ders_json["Konular"] = Konular_json
+        return Ders_json
+    }
 
     /// GETTER
     get_DersAdi() : string{

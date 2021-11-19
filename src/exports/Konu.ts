@@ -34,6 +34,17 @@ export class Konu{
         this.SoruTipleri = [new SoruTipi([this.Ders],[this],SoruYazisi,SoruDegiskenleri,Siklar,CevapFormulu)]
     }
 
+    toJSON(){
+        let Konu_json : any = {}        
+        Konu_json["KonuAdi"] = this.KonuAdi
+        let SoruTipleri_json : any = {}
+        for(let i = 0;i<this.SoruTipleri.length;i++){
+            SoruTipleri_json["SoruTipi"+(i+1)] = this.SoruTipleri[i].toJSON()
+        }
+        Konu_json["SoruTipleri"] = SoruTipleri_json
+        return Konu_json
+    }
+
     /// GETTER
 
     get_Ders() : Ders{

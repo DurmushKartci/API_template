@@ -19,6 +19,16 @@ class SoruTipi{
         return this.CevapFormulu;
     }
 
+    toJSON(){
+        let SoruTipi_json : any = {}
+        SoruTipi_json["SoruYazisi"] = this.SoruYazisi
+        SoruTipi_json["SoruDegiskenleri"] = this.SoruDegiskenleri
+        SoruTipi_json["Siklar"] = this.Siklar
+        SoruTipi_json["CevapFormulu"] = this.CevapFormulu
+        return SoruTipi_json
+
+    }
+
     /// GETTER
 
     get_Dersler() : Ders[]{

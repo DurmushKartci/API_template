@@ -188,7 +188,20 @@ export class Soru{
 
     }
 
-    
+    toJSON(){
+        let Soru_json : any= {}
+        Soru_json["Ders"] = this.Ders.toJSON()
+        Soru_json["Konu"] = this.Konu.toJSON()
+        Soru_json["SoruYazisi"] = this.SoruYazisi
+        Soru_json["Siklar"] = this.Siklar
+        Soru_json["Degiskenler"] = this.Degiskenler
+        Soru_json["Cevap"] = this.Cevap
+        Soru_json["CevapFormulu"] = this.CevapFormulu
+        Soru_json["degisken_isimleri"] = this.degisken_isimleri
+        Soru_json["degisken_verileri"] = this.degisken_verileri
+        Soru_json["SoruTipi"] = this.SoruTipi.toJSON()
+        return Soru_json
+    }
 
     toCSV(){
 
