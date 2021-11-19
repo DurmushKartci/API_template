@@ -1,0 +1,24 @@
+{
+    "0":{
+        "name":"Durmuş",
+        "surname":"Kartcı",
+        "password":"vıuyVvjhvhvhKVKbıIUVIVOUCFVAFŞVPUycvucOUCutcoulCLuycluC",
+        "GRADE":"10",
+        "eq":"10",
+        "iq":"150"
+    },"1":{
+        "name":"Emin",
+        "surname":"Kartcı",
+        "password":"IUBIUBobobobOBOUB",
+        "GRADE":"16",
+        "eq":"150",
+        "iq":"150"
+    },"3":{
+        "name":"Muhammed Fatih",
+        "surname":"Kartcı",
+        "password":"-",
+        "GRADE":"8",
+        "eq":"130",
+        "iq":"90"
+    }
+}
